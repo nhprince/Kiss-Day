@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Kiss Day Nupur! ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fad0c4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            border: 3px solid #fff;
+        }
+
+        /* Photo Area */
+        .photo-frame {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 5px solid #ff4d6d;
+            padding: 3px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 77, 109, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 109, 0); }
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #ff4d6d;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .message-content {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: left; /* Reading style */
+            background: #fff0f3;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff4d6d;
+        }
+
+        .message-content p {
+            margin-bottom: 12px;
+        }
+
+        .last-line {
+            font-weight: 600;
+            color: #d63384;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Flying Kiss Animation */
+        .emoji {
+            position: fixed;
+            top: 100%;
+            animation: flyUp 4s linear forwards;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        @keyframes flyUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <div class="photo-frame">
+            <img src="IMG-20260124-WA0003.jpg.jpeg" alt="Nupur">
+        </div>
+
+        <h1>Happy Kiss Day! 💋</h1>
+
+        <div class="message-content">
+            <p>
+                <strong>Nupur,</strong><br>
+                Ajke Kiss Day-te tomake virtual kiss dicchi, kintu khub druto shotti shotti kache pabo InshaAllah.
+            </p>
+            <p>
+                Imagine koro, amader biyer porer din-gulo kemon hobe? Sokale ghum venghe dekbo tumi amar pashe. Ranna ghore tumi 'Bou' seje ghura-ghuri korba, ar ami pichon theke eshe tomake joriye dhorbo.
+            </p>
+            <p>
+                Kono durrotto thakbe na, kono phone er screen thakbe na. Shudhu tumi, ami ar amader chotto ekta shukh-er shongshar.
+            </p>
+            <p>
+                Tumi amar jiboner shei manush, jake ami protidin, protikhon valobashte chai. Ajke dur theke kiss dicchi, kintu kotha dilam—sarajibon tomake ador kore rakhbo.
+            </p>
+            <p class="last-line">
+                Get ready, Mrs. Bappi! Happiness is loading... ❤️💍
+            </p>
+        </div>
+
+        <button class="btn" onclick="showerKisses()">Accept My Kisses 💋</button>
+
+    </div>
+
+    <script>
+        // Music Play Interaction
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById("bgMusic");
+            audio.play().catch(e => console.log("Audio waiting for interaction"));
+        }, { once: true });
+
+        function showerKisses() {
+            const emojis = ['💋', '❤️', '💏', '💍', '💖'];
+            const container = document.body;
+
+            for (let i = 0; i < 40; i++) {
+                const emoji = document.createElement('div');
+                emoji.classList.add('emoji');
+                emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                
+                emoji.style.left = Math.random() * 100 + 'vw';
+                emoji.style.animationDuration = (Math.random() * 2 + 3) + 's'; 
+                emoji.style.fontSize = (Math.random() * 25 + 20) + 'px';
+                
+                container.appendChild(emoji);
+
+                setTimeout(() => {
+                    emoji.remove();
+                }, 5000);
+            }
+        }
+        
+        // Auto shower on load
+        window.onload = showerKisses;
+    </script>
+
+</body>
+</html>
